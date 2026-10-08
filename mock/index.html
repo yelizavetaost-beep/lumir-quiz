@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Golos+Text:wght@400;500;600;700&family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800;900&family=Golos+Text:wght@400;500;600;700&family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 <style>
 /* ===== stage (формат мока Сергея) ===== */
 :root{--paper:#f6f1e7;--inkc:#1a1a1a;--lead:#c8102e;--acc:#c8102e;
@@ -323,7 +323,7 @@ td .who img,.td-av{width:30px;height:30px;border-radius:50%;object-fit:cover;bac
 .bk.linen b{font-family:var(--serif);font-size:9.5px;letter-spacing:.22em;color:#4a3b2e;font-weight:600}
 .bk.linen small{font-size:5.5px;letter-spacing:.2em;color:#7E6F61;text-transform:uppercase}
 .bk.dark:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,12,8,.85),rgba(20,12,8,.1) 70%)}
-.bk.dark b{position:absolute;left:12px;bottom:10px;z-index:1;font-family:var(--serif);font-size:30px;line-height:.85;color:var(--gold);font-weight:500}
+.bk.dark b{position:absolute;left:12px;bottom:12px;z-index:1;font-family:"Montserrat",sans-serif;font-size:22px;line-height:.85;color:var(--gold);font-weight:300;letter-spacing:.04em}
 .bk.dark small{position:absolute;left:13px;bottom:6px;z-index:1;font-size:5px;letter-spacing:.2em;color:#e9dcc7}
 .bk.mag b{position:absolute;left:10px;right:6px;top:8px;z-index:1;font-family:"Montserrat",sans-serif;font-weight:900;font-size:13px;line-height:.9;color:#fff;letter-spacing:-.01em;text-shadow:0 1px 6px rgba(0,0,0,.35)}
 .bk.mag small{position:absolute;left:10px;bottom:7px;z-index:1;font-size:5.5px;letter-spacing:.18em;color:#fff;text-transform:uppercase}
@@ -348,14 +348,14 @@ td .who img,.td-av{width:30px;height:30px;border-radius:50%;object-fit:cover;bac
 /* C · Тёмный — «Класс» */
 .sd-c{background:#231A14}
 .sd-c .l{padding:12% 10%;display:flex;flex-direction:column;justify-content:space-between;color:#e9dcc7}
-.sd-c .l b{font-family:var(--serif);font-weight:500;font-size:44px;line-height:.8;color:var(--gold)}
+.sd-c .l b{font-family:"Montserrat",sans-serif;font-weight:300;font-size:30px;line-height:.9;letter-spacing:.04em;color:var(--gold)}
 .sd-c .l small{font-size:5.5px;letter-spacing:.24em;text-transform:uppercase}
 .sd-c .l i{font-family:var(--serif);font-size:8px;color:#bfae95}
 .sd-c .r{padding:9% 8%;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;align-content:center}
 .sd-c .r div{aspect-ratio:3/4;border:1px solid rgba(216,184,135,.55)}
 .dl{display:grid;gap:22px;margin-top:20px}
-.dl .cap{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:12px;color:var(--mute)}
-.dl .cap b{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);font-style:italic}
+.dl .dcap{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:12px;color:var(--mute)}
+.dl .dcap b{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);font-style:italic}
 .chips2{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
 .chips2 span{font-size:12px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
 .chips2 span.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -694,8 +694,8 @@ td .who img,.td-av{width:30px;height:30px;border-radius:50%;object-fit:cover;bac
         <h2>Выберите <i>стиль</i> всем классом</h2>
         <p class="sub">Каждый дизайн — на живых фото. Так будет выглядеть разворот вашего ребёнка.</p>
         <div class="dl" data-r="dlist">
-          <div><div class="sd sd-b"><div class="pg bgc P1" style="background-position:center 20%"></div><div class="pg r"><h4>ДРУЗЬЯ<small>те, с кем прошли всё</small></h4><div class="st"><div class="a bgc P2"></div><div class="b bgc P8"></div></div></div></div><div class="cap"><b>Журнал</b><span>разворот «Друзья»</span></div></div>
-          <div><div class="sd sd-c"><div class="pg l"><small>Гимназия 1543</small><b>11 А</b><i>28 человек, одна история</i></div><div class="pg r"><div class="bgc P0"></div><div class="bgc P3"></div><div class="bgc P5"></div><div class="bgc P7"></div><div class="bgc P2" style="background-position:30% center"></div><div class="bgc P8"></div></div></div><div class="cap"><b>Тёмный</b><span>разворот «Класс»</span></div></div>
+          <div><div class="sd sd-b"><div class="pg bgc P1" style="background-position:center 20%"></div><div class="pg r"><h4>ДРУЗЬЯ<small>те, с кем прошли всё</small></h4><div class="st"><div class="a bgc P2"></div><div class="b bgc P8"></div></div></div></div><div class="dcap"><b>Журнал</b><span>разворот «Друзья»</span></div></div>
+          <div><div class="sd sd-c"><div class="pg l"><small>Гимназия 1543</small><b>11 А</b><i>28 человек, одна история</i></div><div class="pg r"><div class="bgc P0"></div><div class="bgc P3"></div><div class="bgc P5"></div><div class="bgc P7"></div><div class="bgc P2" style="background-position:30% center"></div><div class="bgc P8"></div></div></div><div class="dcap"><b>Тёмный</b><span>разворот «Класс»</span></div></div>
         </div>
         <div class="chips2"><span class="on">Классика</span><span>Журнал</span><span>Тёмный</span><span>Минимал</span><span>Плёнка</span><span>+ 7 в каталоге</span></div>
       </div>
