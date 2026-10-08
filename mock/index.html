@@ -723,7 +723,7 @@ const STEPS = [
 const $ = s=>document.querySelector(s), $$ = s=>[...document.querySelectorAll(s)];
 let i = -1;
 const holder=$('#holder'), ring=$('#ring'), cap=$('#cap'), ln=$('#ln'), scl=$('#scl');
-let prevRole=null, target=null;
+let prevRole=null, target=null, frameRect=null;
 // 1) шаблон лендинга → кадры телефона и мини-превью
 $$('[data-tpl]').forEach(h=>h.appendChild(document.getElementById(h.dataset.tpl).content.cloneNode(true)));
 // 2) клоны кадров (видео в кабинете, обложка интро)
@@ -751,6 +751,7 @@ function render(){
   scrollFrame(fr);
   fit();
   const el = fr.querySelector(st.el); const fb=fr.getBoundingClientRect(), eb=el.getBoundingClientRect(); const s=scale();
+  frameRect = fr.classList.contains('phone') ? fb : null;
   target={left:eb.left-8*s, top:eb.top-8*s, right:eb.right+8*s, bottom:eb.bottom+8*s, width:eb.width+16*s, height:eb.height+16*s};
   ring.classList.remove('hide');
   ring.style.left=((eb.left-fb.left)/s-8)+'px'; ring.style.top=((eb.top-fb.top)/s-8)+'px';
@@ -769,8 +770,9 @@ function place(){
   const rb = target; const cw=cap.offsetWidth, ch=cap.offsetHeight, W=innerWidth, H=innerHeight, m=22;
   let x,y;
   if (W<=760){ ln.removeAttribute('d'); return; }
-  if (st.side==='right'){ x=rb.right+m; y=rb.top+rb.height/2-ch/2; if(x+cw>W-12){ x=rb.left-m-cw; } }
-  else if (st.side==='left'){ x=rb.left-m-cw; y=rb.top+rb.height/2-ch/2; if(x<12){ x=rb.right+m; } }
+  const hx = frameRect || rb;
+  if (st.side==='right'){ x=hx.right+m; y=rb.top+rb.height/2-ch/2; if(x+cw>W-12){ x=hx.left-m-cw; } }
+  else if (st.side==='left'){ x=hx.left-m-cw; y=rb.top+rb.height/2-ch/2; if(x<12){ x=hx.right+m; } }
   else { x=rb.left+rb.width/2-cw/2; y=rb.bottom+m; if(y+ch>H-70){ y=rb.top-m-ch; } }
   x=Math.max(12,Math.min(x,W-cw-12)); y=Math.max(12,Math.min(y,H-ch-70));
   cap.style.left=x+'px'; cap.style.top=y+'px';
